@@ -8,9 +8,12 @@
     "lint": "next lint --fix"
   },
   "dependencies": {
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^12.0.8",
     "next": "12.0.8",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-use": "^17.3.2"
   },
   "devDependencies": {
     "@types/node": "17.0.8",
@@ -18,6 +21,7 @@
     "autoprefixer": "^10.4.2",
     "eslint": "^8.7.0",
     "eslint-config-next": "^12.0.8",
+    "next-compose-plugins": "^2.2.1",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.0.15",
     "typescript": "4.5.4"
