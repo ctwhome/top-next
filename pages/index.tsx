@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import type {NextPage} from 'next'
+// import type {NextPage} from 'next'
 import fs from 'fs'
 import path from 'path'
 import Image from 'next/image'
@@ -9,7 +9,7 @@ import Link from 'next/link'
 import matter from 'gray-matter'
 import Post from '../components/Post'
 
-const Home: NextPage = ({posts}) => {
+const Home = ({posts}) => {
   const [count, setCount] = useState(0)
 
   const mouseWheel = useMouseWheel()
@@ -53,7 +53,9 @@ const Home: NextPage = ({posts}) => {
 export async function getStaticProps() {
   const files = fs.readdirSync(path.join('content'))
   const sortOrder = (a, z) => {
-    return new Date(z.frontmatter.published) - new Date(a.frontmatter.published)
+
+    return new Date(z.frontmatter?.published) //- new Date(a.frontmatter?.published)
+    //return new Date(z.frontmatter?.published) - new Date(a.frontmatter?.published)
   }
   const posts = files.map((filename) => {
     const slug = filename.replace('.md', '')
@@ -67,7 +69,7 @@ export async function getStaticProps() {
   })
   return {
     props: {
-      posts: posts.sort(sortOrder),
+      posts: posts.sort(sortOrder as any),
     },
   }
 }

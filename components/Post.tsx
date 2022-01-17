@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function Post({post}) {
+export default function Post({post}: {post:any}) {
   return (
       <Link href={`/posts/${post.slug}`}>
     <div className="btn btn-primary">
