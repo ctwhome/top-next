@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   const [count, setCount] = useState(0);
 
   const mouseWheel = useMouseWheel()
-  const isIdle = useIdle(3000);
+  const isIdle = useIdle(2000);
   // Functions
   // Render
   return (
@@ -20,9 +20,9 @@ const Home: NextPage = () => {
 
       <Link href="/about">About Page in .md</Link>
 
-<Hello/>
+      <Hello/>
 
-       <div>User is idle: {isIdle ? 'Yes 😴' : 'Nope'}</div>
+       <div>User is idle after 2 seconds?: {isIdle ? 'Yes 😴' : 'Nope'}</div>
        <button onClick={() => setCount(count + 1)}>
         Click me { count }
       </button>
