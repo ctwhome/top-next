@@ -18,7 +18,13 @@ const Home: NextPage = () => {
         Hello world! 
       </h1>   
 
-      <Link href="/about">About Page in .md</Link>
+      <Link href="/about">
+          
+        <a  className="btn">
+
+        About Page in .md
+        </a>
+      </Link>
 
       <Hello/>
 
