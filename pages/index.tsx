@@ -23,10 +23,15 @@ const Home = ({posts}) => {
         Top Next - Starter
       </h1>
 
+
       <Link href="/about">
         <a className="btn">
         About Page in .md
         </a>
+      </Link>
+
+      <Link href="/notion">
+        <a className="btn m-4"> See pages from Notion</a>
       </Link>
 
 
