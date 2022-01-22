@@ -4,10 +4,10 @@ import fs from 'fs'
 import path from 'path'
 import Image from 'next/image'
 import {useIdle, useMouseWheel} from 'react-use'
-import Hello from '../components/Hello'
 import Link from 'next/link'
 import matter from 'gray-matter'
-import Post from '../components/Post'
+import Hello from 'components/Hello'
+import Post from 'components/Post'
 
 const Home = ({posts}) => {
   const [count, setCount] = useState(0)
@@ -15,7 +15,6 @@ const Home = ({posts}) => {
   const mouseWheel = useMouseWheel()
   const isIdle = useIdle(2000)
   // Functions
-
 
   // Render
   return (
@@ -35,18 +34,18 @@ const Home = ({posts}) => {
         <Hello/>
       </div>
 
-       <div>User is idle after 2 seconds?: {isIdle ? 'Yes 😴' : 'Nope'}</div>
-       <button onClick={() => setCount(count + 1)}>
+      <div>User is idle after 2 seconds?: {isIdle ? 'Yes 😴' : 'Nope'}</div>
+      <button onClick={() => setCount(count + 1)}>
         Click me { count }
       </button>
       <div className="flex">{mouseWheel}</div>
       <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
 
-<div>
-          {posts.map((post, index) => (
-            <Post post={post} key={index} />
-          ))}
-        </div>
+      <div>
+        {posts.map((post, index) => (
+          <Post post={post} key={index} />
+        ))}
+      </div>
     </>
   )
 }
