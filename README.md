@@ -1,3 +1,8 @@
+> ⚠️ **This repository has been moved to [top-frameworks monorepo](https://github.com/ctwhome/top-frameworks/tree/main/top-next)**
+> 
+> This repository is now archived. All development continues in the monorepo.
+> Please update your bookmarks and references.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
